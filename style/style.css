@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0e8ff;
+}
+
+a {
+  font-weight: 700;
+  font-size: 15px;
+  color: #3829e0;
+}
+a:hover {
+  text-decoration: none;
+  opacity: 0.6;
+}
+
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: url("./../images/pattern-background-desktop.svg") no-repeat top center fixed;
+  background-size: contain;
+  padding: 0px 10px;
+}
+@media screen and (max-width: 375px) {
+  main {
+    padding: 0px 20px;
+    background: url("./../images/pattern-background-mobile.svg") no-repeat top center fixed;
+  }
+}
+
+.card {
+  width: 450px;
+  background-color: white;
+  border-radius: 20px;
+}
+.card__header {
+  border-radius: 20px 20px 0px 0px;
+  height: 220px;
+  background: url("./../images/illustration-hero.svg") no-repeat center;
+}
+@media screen and (max-width: 375px) {
+  .card__header {
+    height: 160px;
+    background-size: cover;
+  }
+}
+.card__body {
+  text-align: center;
+  padding: 25px 45px;
+}
+@media screen and (max-width: 375px) {
+  .card__body {
+    padding: 20px 28px;
+  }
+}
+.card__body-title {
+  font-size: 30px;
+  font-weight: 900;
+  color: #1f2f56;
+  margin-bottom: 16px;
+}
+@media screen and (max-width: 375px) {
+  .card__body-title {
+    font-size: 24px;
+  }
+}
+.card__body-txt {
+  font-size: 16px;
+  font-weight: 500;
+  color: #7280a7;
+  letter-spacing: 0.5px;
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+@media screen and (max-width: 375px) {
+  .card__body-txt {
+    font-size: 15px;
+  }
+}
+.card__footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan {
+  padding: 25px 20px;
+  background-color: #f5f7ff;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  margin-bottom: 25px;
+}
+@media screen and (max-width: 375px) {
+  .plan {
+    padding: 20px 15px;
+  }
+}
+.plan__icon {
+  margin-right: 20px;
+}
+.plan__description {
+  text-align: start;
+  flex-basis: 40%;
+  margin-right: auto;
+}
+.plan__description h2, .plan__description p {
+  margin: 0;
+  padding: 0;
+}
+.plan__description h2 {
+  font-size: 17px;
+  font-weight: 900;
+  color: #1f2f56;
+  margin-bottom: 5px;
+}
+@media screen and (max-width: 375px) {
+  .plan__description h2 {
+    font-size: 14px;
+  }
+}
+.plan__description p {
+  color: #7280a7;
+}
+
+.btn {
+  margin-bottom: 14px;
+  border-radius: 10px;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+.btn__dark {
+  background-color: #3829e0;
+  color: white;
+  box-shadow: 0px 8px 40px -13px #3829e0;
+}
+.btn__dark:hover {
+  opacity: 0.7;
+}
+.btn__default {
+  background-color: transparent;
+  color: #7280a7;
+}
+.btn__default:hover {
+  color: #1f2f56;
+  opacity: 0.8;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+  padding: 10px 5px;
+}
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */
