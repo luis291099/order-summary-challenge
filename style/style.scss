@@ -9,6 +9,8 @@ $bright-blue: hsl(245, 75%, 52%);
 $very-pale-blue: hsl(225, 100%, 98%);
 $desaturated-blue: hsl(224, 23%, 55%);
 $dark-blue: hsl(223, 47%, 23%);
+$white: hsl(0, 0%, 100%);
+$mobile-width: 375px;
 
 body {
     font-family: 'Red Hat Display', sans-serif;
@@ -19,8 +21,9 @@ body {
 
 a {
     font-weight: 700;
-    font-size: 15px;
+    font-size: 0.95rem;
     color: $bright-blue;
+    transition: 0.2s;
 
     &:hover {
         text-decoration: none;
@@ -29,25 +32,31 @@ a {
 }
 
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    overflow: auto;
+    overflow-x: hidden;
     width: 100vw;
     height: 100vh;
     background: url('./../images/pattern-background-desktop.svg') no-repeat top center fixed;
     background-size: contain;
-    padding: 0px 10px;
+    padding: 0 1rem;
 
-    @media screen and (max-width: 375px) {
-        padding: 0px 20px;
+    @media screen and (max-width: $mobile-width) {
         background: url('./../images/pattern-background-mobile.svg') no-repeat top center fixed;
     }
 }
 
 .card {
+    margin: auto;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
     width: 450px;
-    background-color: white;
+    background-color: $white;
     border-radius: 20px;
+    box-shadow: 0px 8px 50px -30px $desaturated-blue;
+
+    @media screen and (max-width: 450px) {
+        width: 100%;
+    }
 
     &__header {
         border-radius: 20px 20px 0px 0px;
@@ -62,10 +71,10 @@ main {
 
     &__body {
         text-align: center;
-        padding: 25px 45px;
+        padding: 16px 45px;
 
-        @media screen and (max-width: 375px) {
-            padding: 20px 28px;
+        @media screen and (max-width: $mobile-width) {
+            padding: 20px 22px;
         }
         
         &-title {
@@ -74,7 +83,7 @@ main {
             color: $dark-blue;
             margin-bottom: 16px;
 
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: $mobile-width) {
                 font-size: 24px;
             }
         }
@@ -86,8 +95,9 @@ main {
             letter-spacing: 0.5px;
             margin-bottom: 24px;
             line-height: 1.6;
+            padding: 0px 10px;
 
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: $mobile-width) {
                 font-size: 15px;
             }
         }
@@ -96,18 +106,23 @@ main {
     &__footer {
         display: flex;
         flex-direction: column;
+        padding: 16px 45px;
+
+        @media screen and (max-width: $mobile-width) {
+            padding: 20px 22px;
+        }
     }
 }
 
 .plan {
-    padding: 25px 20px;
+    padding: 22px;
     background-color: $very-pale-blue;
     display: flex;
     align-items: center;
-    border-radius: 5px;
-    margin-bottom: 25px;
+    border-radius: 14px;
+    margin-bottom: 28px;
 
-    @media screen and (max-width: 375px) {
+    @media screen and (max-width: $mobile-width) {
         padding: 20px 15px;
     }
 
@@ -131,7 +146,7 @@ main {
             color: $dark-blue;
             margin-bottom: 5px;
 
-            @media screen and (max-width: 375px) {
+            @media screen and (max-width: $mobile-width) {
                 font-size: 14px;
             }
         }
@@ -153,7 +168,7 @@ main {
 
     &__dark {
         background-color: $bright-blue;
-        color: white;
+        color: $white;
         box-shadow: 0px 8px 40px -13px $bright-blue;
 
         &:hover {
@@ -169,22 +184,5 @@ main {
             color: $dark-blue;
             opacity: 0.8;
         }
-    }
-}
-
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
-.attribution { 
-    font-size: 11px;
-    text-align: center;
-    width: 100%;
-    padding: 10px 5px; 
-
-    a { 
-        color: hsl(228, 45%, 44%);
     }
 }

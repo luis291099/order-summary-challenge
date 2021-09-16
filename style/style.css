@@ -12,8 +12,9 @@ body {
 
 a {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 0.95rem;
   color: #3829e0;
+  transition: 0.2s;
 }
 a:hover {
   text-decoration: none;
@@ -21,26 +22,33 @@ a:hover {
 }
 
 main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  overflow: auto;
+  overflow-x: hidden;
   width: 100vw;
   height: 100vh;
   background: url("./../images/pattern-background-desktop.svg") no-repeat top center fixed;
   background-size: contain;
-  padding: 0px 10px;
+  padding: 0 1rem;
 }
 @media screen and (max-width: 375px) {
   main {
-    padding: 0px 20px;
     background: url("./../images/pattern-background-mobile.svg") no-repeat top center fixed;
   }
 }
 
 .card {
+  margin: auto;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
   width: 450px;
   background-color: white;
   border-radius: 20px;
+  box-shadow: 0px 8px 50px -30px #7280a7;
+}
+@media screen and (max-width: 450px) {
+  .card {
+    width: 100%;
+  }
 }
 .card__header {
   border-radius: 20px 20px 0px 0px;
@@ -55,11 +63,11 @@ main {
 }
 .card__body {
   text-align: center;
-  padding: 25px 45px;
+  padding: 16px 45px;
 }
 @media screen and (max-width: 375px) {
   .card__body {
-    padding: 20px 28px;
+    padding: 20px 22px;
   }
 }
 .card__body-title {
@@ -80,6 +88,7 @@ main {
   letter-spacing: 0.5px;
   margin-bottom: 24px;
   line-height: 1.6;
+  padding: 0px 10px;
 }
 @media screen and (max-width: 375px) {
   .card__body-txt {
@@ -89,15 +98,21 @@ main {
 .card__footer {
   display: flex;
   flex-direction: column;
+  padding: 16px 45px;
+}
+@media screen and (max-width: 375px) {
+  .card__footer {
+    padding: 20px 22px;
+  }
 }
 
 .plan {
-  padding: 25px 20px;
+  padding: 22px;
   background-color: #f5f7ff;
   display: flex;
   align-items: center;
-  border-radius: 5px;
-  margin-bottom: 25px;
+  border-radius: 14px;
+  margin-bottom: 28px;
 }
 @media screen and (max-width: 375px) {
   .plan {
@@ -155,22 +170,6 @@ main {
 .btn__default:hover {
   color: #1f2f56;
   opacity: 0.8;
-}
-
-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-  width: 100%;
-  padding: 10px 5px;
-}
-.attribution a {
-  color: #3e52a3;
 }
 
 /*# sourceMappingURL=style.css.map */
