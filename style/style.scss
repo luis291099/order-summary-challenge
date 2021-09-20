@@ -51,19 +51,19 @@ main {
     margin-bottom: 10vh;
     width: 450px;
     background-color: $white;
-    border-radius: 20px;
+    border-radius: 1.25rem;
     box-shadow: 0px 8px 50px -30px $desaturated-blue;
 
-    @media screen and (max-width: 450px) {
+    @media screen and (max-width: $mobile-width) {
         width: 100%;
     }
 
     &__header {
-        border-radius: 20px 20px 0px 0px;
+        border-radius: 1.25rem 1.25rem 0 0;
         height: 220px;
         background: url('./../images/illustration-hero.svg') no-repeat center;
 
-        @media screen and (max-width: 375px) {
+        @media screen and (max-width: $mobile-width) {
             height: 160px;
             background-size: cover;
         }
@@ -71,31 +71,31 @@ main {
 
     &__body {
         text-align: center;
-        padding: 16px 45px;
+        padding: 1rem 2.8rem 0 2.8rem;
 
         @media screen and (max-width: $mobile-width) {
-            padding: 20px 22px;
+            padding: 1.25rem 1.4rem 0 1.4rem;
         }
         
         &-title {
             font-size: 30px;
             font-weight: 900;
             color: $dark-blue;
-            margin-bottom: 16px;
+            margin-bottom: 1rem;
 
             @media screen and (max-width: $mobile-width) {
-                font-size: 24px;
+                font-size: 1.5rem;
             }
         }
 
         &-txt {
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 500;
             color: $desaturated-blue;
             letter-spacing: 0.5px;
-            margin-bottom: 24px;
+            margin-bottom: 1.5rem;
             line-height: 1.6;
-            padding: 0px 10px;
+            padding: 0 0.625rem;
 
             @media screen and (max-width: $mobile-width) {
                 font-size: 15px;
@@ -106,24 +106,25 @@ main {
     &__footer {
         display: flex;
         flex-direction: column;
-        padding: 16px 45px;
+        padding: 0.625rem 2.8rem 1rem 2.8rem;
 
         @media screen and (max-width: $mobile-width) {
-            padding: 20px 22px;
+            padding: 1.25rem 1.4rem;
         }
     }
 }
 
 .plan {
-    padding: 22px;
+    padding: 1.375rem 1.5rem;
     background-color: $very-pale-blue;
     display: flex;
     align-items: center;
-    border-radius: 14px;
-    margin-bottom: 28px;
+    border-radius: 0.95rem;
+    margin-bottom: 1.75rem;
 
     @media screen and (max-width: $mobile-width) {
-        padding: 20px 15px;
+        padding: 1.25rem 15px;
+        margin-bottom: 0;
     }
 
     &__icon {
@@ -141,13 +142,13 @@ main {
         }
 
         h2 {
-            font-size: 17px;
+            font-size: 1.0625rem;
             font-weight: 900;
             color: $dark-blue;
-            margin-bottom: 5px;
+            margin-bottom: 0.25rem;
 
             @media screen and (max-width: $mobile-width) {
-                font-size: 14px;
+                font-size: 0.875rem;
             }
         }
 
@@ -158,10 +159,10 @@ main {
 }
 
 .btn {
-    margin-bottom: 14px;
-    border-radius: 10px;
-    padding: 15px;
-    font-size: 16px;
+    margin-bottom: 0.875rem;
+    border-radius: 0.625rem;
+    padding: 1rem;
+    font-size: 1rem;
     font-weight: 700;
     border: none;
     cursor: pointer;
@@ -169,7 +170,7 @@ main {
     &__dark {
         background-color: $bright-blue;
         color: $white;
-        box-shadow: 0px 8px 40px -13px $bright-blue;
+        box-shadow: 0 0.5rem 2.5rem -0.8125rem $bright-blue;
 
         &:hover {
             opacity: 0.7;
